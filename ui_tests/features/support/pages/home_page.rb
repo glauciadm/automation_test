@@ -18,8 +18,6 @@ class HomePage
         find(@linkSignout).click
     end
 
-    def validButtonSignIn
-    
-    end
+ 
 
 end

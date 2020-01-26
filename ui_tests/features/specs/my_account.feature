@@ -41,13 +41,13 @@ Feature: My Account
         And click to create the account
         Then is displayed a page to register the account
 
-    @forgotPassword
+    @forgotPassword @automatized
     Scenario: Retrieve password
         When click to sign in
-        And click to recover password
+        And click to forgot password
         And fill the registered email 'glaucia.admachado@gmail.com'
         And click to retrieve password
-        Then the message 'A confirmation email has been sent to your address' is displayed on the page
+        Then a confirmation message is displayed on the page: 'A confirmation email has been sent to your address: glaucia.admachado@gmail.com' 
 
     @accountData
     Scenario: Fill the account data

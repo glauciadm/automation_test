@@ -57,3 +57,16 @@ end
 Then("is displayed a page to register the account") do 
   expect(page).to have_current_path('http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation', url: true)
 end
+
+#forgotPassord
+When("click to forgot password") do
+  @login_page.getPassword
+end
+
+When("click to retrieve password") do
+  @login_page.retrievePassword
+end
+
+Then("a confirmation message is displayed on the page: {string}") do |message|
+  expect(@login_page.getRetrievePasswordMsg).to eql message
+end

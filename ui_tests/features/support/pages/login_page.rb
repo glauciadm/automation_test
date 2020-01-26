@@ -8,6 +8,10 @@ class LoginPage
         @txtNewEmailAccount = '#email_create';
         @btnCreateAccount = '#SubmitCreate';
         @msgErroCreateAccount = '#create_account_error';
+        @linkForgotPassord = 'a[href="http://automationpractice.com/index.php?controller=password"]';
+        @btnRetrievePassword = '.btn.btn-default.button.button-medium';
+        @msgRetrievePassword = '.alert.alert-success';
+
     end
 
     def setEmail(email)
@@ -38,6 +42,18 @@ class LoginPage
 
     def getErrorMsg
         find(@msgErroCreateAccount).text()
+    end
+
+    def getPassword
+        find(@linkForgotPassord).click
+    end
+
+    def retrievePassword
+        find(@btnRetrievePassword).click
+    end
+
+    def getRetrievePasswordMsg
+        find(@msgRetrievePassword).text()
     end
 
 end
