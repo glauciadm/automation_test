@@ -34,4 +34,5 @@ class ContactPage
     def getSuccessMsg
         find(@msgSuccess).text()
     end
+    
 end

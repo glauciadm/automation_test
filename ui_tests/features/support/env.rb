@@ -2,7 +2,7 @@ require 'capybara'
 require 'capybara/cucumber'
 require 'selenium-webdriver'
 
-@browser = ENV['BROWSER'] #env variável de ambiente
+@browser = ENV['BROWSER'] #env environment variable
 
 
     Capybara.register_driver :selenium do |app|
@@ -20,19 +20,18 @@ require 'selenium-webdriver'
         Capybara.javascript_driver = :selenium
         Capybara.run_server = false
 
-        caps = Selenium::WebDriver::Remote::Capabilities.chrome(  #configurações do chrome
+        caps = Selenium::WebDriver::Remote::Capabilities.chrome(  #chrome config
             'chromeOptions'=> {
-            'args'=> ['--no-default-browser-check'] #não perguntar se deseja definir como navegador padrão
+            'args'=> ['--no-default-browser-check'] #don't ask if you want to set it as your default browser
             }
         )
     #Capybara.register_driver :selenium do |app|
             Capybara::Selenium::Driver.new(app, browser: :remote, 
-            url: 'http://selenium_server:4444/wd/hub',  #inserir url do selenium server
-            desired_capabilities: caps    #configurações do chrome
+            url: 'http://selenium_server:4444/wd/hub',  #set selenium server url
+            desired_capabilities: caps    #chrome config
             )
         end   
     end
-
 
     Capybara.configure do |config|
         config.default_driver = :selenium

@@ -23,5 +23,4 @@ class HomePage
         find(@linkContactUs).click
     end
   
-
 end

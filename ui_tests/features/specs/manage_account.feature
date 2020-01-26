@@ -37,7 +37,7 @@ Feature: Manage Account
     @validCreate @automatized
     Scenario: Create an account with a valid email
         When click to sign in
-        And fill the new email 'mystore022@story.com'
+        And fill the new email 'mystore16@mystory.com'
         And click to create the account
         Then is displayed a page to register the account
 

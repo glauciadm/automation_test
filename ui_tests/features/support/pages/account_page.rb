@@ -23,5 +23,5 @@ class AccountPage
     def accessHome
         find(@linkHome).click
     end
-end
 
+end

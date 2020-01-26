@@ -52,5 +52,3 @@ Given("add a product to the cart") do
   Then("the order is confirmed with the message {string} on the page") do |message|
     expect(@purchase_page.getMsgCompletedOrder).to eql message
   end
-
-  

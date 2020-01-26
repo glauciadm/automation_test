@@ -9,12 +9,11 @@ Before do
     #definir resolução para o teste
 end
 
-
 After do |scenario| 
-    nome = scenario.name.gsub(/[^A-Za-z0-9 ]/, '') #pegar o nome do arquivo e remover caracter especial
-    nome = nome.tr(' ', '_').downcase! #substituir espaço por _ e deixar em letra minúscula
-    shot = "log/screenshots/#{nome}.png" #definindo diretório da imagem e nome do arquivo
+    name = scenario.name.gsub(/[^A-Za-z0-9 ]/, '') #get the file's name and remove special characters
+    name = name.tr(' ', '_').downcase! #replace space with _ and leave in lower case
+    shot = "log/screenshots/#{name}.png" #defining image directory and file name
 
     page.save_screenshot(shot)
-    embed(shot, 'image/png', 'Evidências') #incluindo a imagem no relatório
+    embed(shot, 'image/png', 'Evidence') #including image in the report
 end
