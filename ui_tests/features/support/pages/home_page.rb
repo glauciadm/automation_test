@@ -3,6 +3,7 @@ class HomePage
 
     def initialize 
         @linkSignin = '.login';
+        @linkSignout = '.logout';
     end
     
     def access
@@ -11,5 +12,14 @@ class HomePage
 
     def accessSignin
         find(@linkSignin).click
-   end
+    end
+
+    def accessSignout
+        find(@linkSignout).click
+    end
+
+    def validButtonSignIn
+    
+    end
+
 end
