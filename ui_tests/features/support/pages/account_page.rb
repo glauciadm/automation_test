@@ -5,6 +5,7 @@ class AccountPage
         @formTitle = '.page-heading';
         @msgAccount = '.info-account';
         @btnRegister = '#submitAccount';
+        @linkHome = '.icon-home';
     end
 
     def getAccountMsg
@@ -17,6 +18,10 @@ class AccountPage
 
     def registerAccount
         find(@btnRegister).click
+    end
+
+    def accessHome
+        find(@linkHome).click
     end
 end
 

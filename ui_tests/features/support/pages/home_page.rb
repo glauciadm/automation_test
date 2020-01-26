@@ -7,7 +7,6 @@ class HomePage
         @linkContactUs = '#contact-link';
     end
     
-    
     def access
         visit '/'
     end

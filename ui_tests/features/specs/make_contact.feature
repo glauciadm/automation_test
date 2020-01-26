@@ -11,4 +11,4 @@ Feature: Make Contact
         And fill the order reference '123456'
         And write the message text 'I dont receive my order'
         And send the message
-        Then a success message is displayed on the page: 'Your message has been successfully sent to our team.' 
+        Then a success message is displayed on the page: 'Your message has been successfully sent to our team.'

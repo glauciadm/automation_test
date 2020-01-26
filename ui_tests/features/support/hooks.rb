@@ -3,6 +3,7 @@ Before do
     @home_page = HomePage.new
     @account_page = AccountPage.new
     @contact_page = ContactPage.new
+    @purchase_page = PurchasePage.new
 
     page.current_window.resize_to(1366, 728)
     #definir resolução para o teste
