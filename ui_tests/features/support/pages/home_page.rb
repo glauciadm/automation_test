@@ -4,7 +4,9 @@ class HomePage
     def initialize 
         @linkSignin = '.login';
         @linkSignout = '.logout';
+        @linkContactUs = '#contact-link';
     end
+    
     
     def access
         visit '/'
@@ -18,6 +20,9 @@ class HomePage
         find(@linkSignout).click
     end
 
- 
+    def makeContact
+        find(@linkContactUs).click
+    end
+  
 
 end

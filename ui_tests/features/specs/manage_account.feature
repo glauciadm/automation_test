@@ -1,4 +1,4 @@
-Feature: My Account
+Feature: Manage Account
 
     Background:
         Given the user access the home page
@@ -94,13 +94,3 @@ Feature: My Account
         When fill the email 'newstore@mystore.com'
         And submit the subscribe
         Then the message 'Newsletter : You have successfully subscribed to this newsletter' is displayed on the page
-
-    @contact
-    Scenario: Send a message
-        And click to contact the store
-        When select a subject
-        And fill the email 'oldstore@mystore.com'
-        And fill the order reference '123456'
-        And write the message text
-        And send the message
-        Then the message 'Your message has been successfully sent to our team.' is displayed on the page
