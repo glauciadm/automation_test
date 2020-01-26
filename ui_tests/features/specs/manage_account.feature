@@ -37,7 +37,7 @@ Feature: Manage Account
     @validCreate @automatized
     Scenario: Create an account with a valid email
         When click to sign in
-        And fill the new email 'mystore@story.com'
+        And fill the new email 'mystore022@story.com'
         And click to create the account
         Then is displayed a page to register the account
 
@@ -64,8 +64,6 @@ Feature: Manage Account
             | alias       |
         And click to register
         Then the message 'Welcome to your account. Here you can manage all of your personal information and orders.' is displayed on the page
-
-    
 
     @newsletter
     Scenario: Subscribe to the newsletter
