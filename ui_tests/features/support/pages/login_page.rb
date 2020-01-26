@@ -5,7 +5,6 @@ class LoginPage
         @txtEmail = '#email';
         @txtPassword = '#passwd';
         @btnSignin = '#SubmitLogin';
-        @msgAccount = '.info-account';
         @txtNewEmailAccount = '#email_create';
         @btnCreateAccount = '#SubmitCreate';
         @msgErroCreateAccount = '#create_account_error';
@@ -21,10 +20,6 @@ class LoginPage
 
     def clickSubmit
         find(@btnSignin).click
-    end
-
-    def getAccountMsg
-        find(@msgAccount).text()
     end
 
     def loginDefault

@@ -20,7 +20,7 @@ When("submit login") do
 end
 
 Then("the message {string} is displayed on the page") do |message|
-  expect(@login_page.getAccountMsg).to eql message
+  expect(@account_page.getAccountMsg).to eql message
 end
 
 #logout
@@ -52,4 +52,8 @@ end
 
 Then("the error message {string} is displayed on the page") do |message|
   expect(@login_page.getErrorMsg).to eql message
+end
+
+Then("is displayed a page to register the account") do 
+  expect(page).to have_current_path('http://automationpractice.com/index.php?controller=authentication&back=my-account#account-creation', url: true)
 end

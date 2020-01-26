@@ -1,6 +1,7 @@
 Before do
     @login_page = LoginPage.new
     @home_page = HomePage.new
+    @account_page = AccountPage.new
 
     page.current_window.resize_to(1366, 728)
     #definir resolução para o teste
