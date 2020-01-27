@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200126 23:43:24.776" rpa="false">
-<suite id="s1" name="TestCasesAPI" source="C:\workspace\api_tests\TestCasesAPI.robot">
+<robot generator="Robot 3.1.2 (Python 3.8.1 on win32)" generated="20200127 00:08:14.876" rpa="false">
+<suite id="s1" name="TestCasesAPI" source="C:\workspace\automated_tests\api_tests\TestCasesAPI.robot">
 <kw name="Conect API" library="ResourceAPI" type="setup">
 <kw name="Create Session" library="RequestsLibrary">
 <doc>Create Session: create a HTTP session to a server</doc>
@@ -8,10 +8,10 @@
 <arg>jsonplaceholder</arg>
 <arg>${URL_API}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:24.999" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
-<status status="PASS" starttime="20200126 23:43:24.998" endtime="20200126 23:43:24.999"></status>
+<msg timestamp="20200127 00:08:15.167" level="INFO">Creating Session using : alias=jsonplaceholder, url=https://jsonplaceholder.typicode.com, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<status status="PASS" starttime="20200127 00:08:15.167" endtime="20200127 00:08:15.167"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:24.998" endtime="20200126 23:43:24.999"></status>
+<status status="PASS" starttime="20200127 00:08:15.166" endtime="20200127 00:08:15.167"></status>
 </kw>
 <test id="s1-t1" name="Request all users">
 <kw name="Request all users" library="ResourceAPI">
@@ -25,21 +25,21 @@ given `alias`</doc>
 <assign>
 <var>${RESPONSE}</var>
 </assign>
-<msg timestamp="20200126 23:43:25.001" level="INFO">GET Request using : uri=/users, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200127 00:08:15.169" level="INFO">GET Request using : uri=/users, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200126 23:43:25.246" level="INFO">c:\users\glaucia\appdata\local\programs\python\python38-32\lib\site-packages\urllib3\connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+<msg timestamp="20200127 00:08:15.776" level="INFO">c:\users\glaucia\appdata\local\programs\python\python38-32\lib\site-packages\urllib3\connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<msg timestamp="20200126 23:43:25.248" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200126 23:43:25.000" endtime="20200126 23:43:25.248"></status>
+<msg timestamp="20200127 00:08:15.778" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200127 00:08:15.168" endtime="20200127 00:08:15.778"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${RESPONSE.text}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.251" level="INFO">[
+<msg timestamp="20200127 00:08:15.779" level="INFO">[
   {
     "id": 1,
     "name": "Leanne Graham",
@@ -271,17 +271,17 @@ json=None</msg>
     }
   }
 ]</msg>
-<status status="PASS" starttime="20200126 23:43:25.249" endtime="20200126 23:43:25.252"></status>
+<status status="PASS" starttime="20200127 00:08:15.778" endtime="20200127 00:08:15.779"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${RESPONSE}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.254" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200126 23:43:25.253" endtime="20200126 23:43:25.254"></status>
+<msg timestamp="20200127 00:08:15.779" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200127 00:08:15.779" endtime="20200127 00:08:15.780"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.000" endtime="20200126 23:43:25.254"></status>
+<status status="PASS" starttime="20200127 00:08:15.168" endtime="20200127 00:08:15.780"></status>
 </kw>
 <kw name="Validate status code" library="ResourceAPI">
 <arguments>
@@ -293,12 +293,12 @@ json=None</msg>
 <arg>${RESPONSE.status_code}</arg>
 <arg>${CORRECT_STATUSCODE}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.258" level="INFO">Argument types are:
+<msg timestamp="20200127 00:08:15.781" level="INFO">Argument types are:
 &lt;class 'int'&gt;
 &lt;type 'unicode'&gt;</msg>
-<status status="PASS" starttime="20200126 23:43:25.257" endtime="20200126 23:43:25.258"></status>
+<status status="PASS" starttime="20200127 00:08:15.781" endtime="20200127 00:08:15.781"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.255" endtime="20200126 23:43:25.259"></status>
+<status status="PASS" starttime="20200127 00:08:15.780" endtime="20200127 00:08:15.782"></status>
 </kw>
 <kw name="Validate reason" library="ResourceAPI">
 <arguments>
@@ -310,9 +310,9 @@ json=None</msg>
 <arg>${RESPONSE.reason}</arg>
 <arg>${CORRECT_REASON}</arg>
 </arguments>
-<status status="PASS" starttime="20200126 23:43:25.261" endtime="20200126 23:43:25.262"></status>
+<status status="PASS" starttime="20200127 00:08:15.783" endtime="20200127 00:08:15.784"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.260" endtime="20200126 23:43:25.263"></status>
+<status status="PASS" starttime="20200127 00:08:15.782" endtime="20200127 00:08:15.784"></status>
 </kw>
 <kw name="Validate list with &quot;10&quot; users" library="ResourceAPI">
 <kw name="Length Should Be" library="BuiltIn">
@@ -321,14 +321,14 @@ json=None</msg>
 <arg>${RESPONSE.json()}</arg>
 <arg>${QT_USERS}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.265" level="INFO">Length is 10</msg>
-<status status="PASS" starttime="20200126 23:43:25.264" endtime="20200126 23:43:25.265"></status>
+<msg timestamp="20200127 00:08:15.786" level="INFO">Length is 10</msg>
+<status status="PASS" starttime="20200127 00:08:15.785" endtime="20200127 00:08:15.786"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.264" endtime="20200126 23:43:25.266"></status>
+<status status="PASS" starttime="20200127 00:08:15.785" endtime="20200127 00:08:15.786"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:24.999" endtime="20200126 23:43:25.266" critical="yes"></status>
+<status status="PASS" starttime="20200127 00:08:15.167" endtime="20200127 00:08:15.787" critical="yes"></status>
 </test>
-<test id="s1-t2" name="Request user">
+<test id="s1-t2" name="Request an user">
 <kw name="Request user &quot;1&quot;" library="ResourceAPI">
 <kw name="Get Request" library="RequestsLibrary">
 <doc>Send a GET request on the session object found using the
@@ -340,21 +340,21 @@ given `alias`</doc>
 <assign>
 <var>${RESPONSE}</var>
 </assign>
-<msg timestamp="20200126 23:43:25.271" level="INFO">GET Request using : uri=/users/1, params=None, allow_redirects=True, timeout=None
+<msg timestamp="20200127 00:08:15.790" level="INFO">GET Request using : uri=/users/1, params=None, allow_redirects=True, timeout=None
 headers={'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive'} 
 data=None 
 json=None</msg>
-<msg timestamp="20200126 23:43:25.308" level="INFO">c:\users\glaucia\appdata\local\programs\python\python38-32\lib\site-packages\urllib3\connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
+<msg timestamp="20200127 00:08:15.835" level="INFO">c:\users\glaucia\appdata\local\programs\python\python38-32\lib\site-packages\urllib3\connectionpool.py:997: InsecureRequestWarning: Unverified HTTPS request is being made to host 'jsonplaceholder.typicode.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#ssl-warnings
   warnings.warn(</msg>
-<msg timestamp="20200126 23:43:25.308" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200126 23:43:25.270" endtime="20200126 23:43:25.308"></status>
+<msg timestamp="20200127 00:08:15.836" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200127 00:08:15.790" endtime="20200127 00:08:15.836"></status>
 </kw>
 <kw name="Log" library="BuiltIn">
 <doc>Logs the given message with the given level.</doc>
 <arguments>
 <arg>${RESPONSE.text}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.309" level="INFO">{
+<msg timestamp="20200127 00:08:15.837" level="INFO">{
   "id": 1,
   "name": "Leanne Graham",
   "username": "Bret",
@@ -377,21 +377,87 @@ json=None</msg>
     "bs": "harness real-time e-markets"
   }
 }</msg>
-<status status="PASS" starttime="20200126 23:43:25.309" endtime="20200126 23:43:25.309"></status>
+<status status="PASS" starttime="20200127 00:08:15.836" endtime="20200127 00:08:15.837"></status>
 </kw>
 <kw name="Set Test Variable" library="BuiltIn">
 <doc>Makes a variable available everywhere within the scope of the current test.</doc>
 <arguments>
 <arg>${RESPONSE}</arg>
 </arguments>
-<msg timestamp="20200126 23:43:25.310" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
-<status status="PASS" starttime="20200126 23:43:25.309" endtime="20200126 23:43:25.310"></status>
+<msg timestamp="20200127 00:08:15.838" level="INFO">${RESPONSE} = &lt;Response [200]&gt;</msg>
+<status status="PASS" starttime="20200127 00:08:15.837" endtime="20200127 00:08:15.838"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.270" endtime="20200126 23:43:25.310"></status>
+<status status="PASS" starttime="20200127 00:08:15.789" endtime="20200127 00:08:15.838"></status>
 </kw>
-<status status="PASS" starttime="20200126 23:43:25.269" endtime="20200126 23:43:25.310" critical="yes"></status>
+<kw name="Validate user information" library="ResourceAPI">
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>id</arg>
+<arg>${USER_1.id}</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.839" endtime="20200127 00:08:15.840"></status>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>name</arg>
+<arg>${USER_1.name}</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.840" endtime="20200127 00:08:15.841"></status>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>username</arg>
+<arg>${USER_1.username}</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.841" endtime="20200127 00:08:15.842"></status>
+</kw>
+<kw name="Dictionary Should Contain Item" library="Collections">
+<doc>An item of ``key`` / ``value`` must be found in a ``dictionary``.</doc>
+<arguments>
+<arg>${RESPONSE.json()}</arg>
+<arg>email</arg>
+<arg>${USER_1.email}</arg>
+</arguments>
+<status status="PASS" starttime="20200127 00:08:15.842" endtime="20200127 00:08:15.844"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:15.839" endtime="20200127 00:08:15.844"></status>
+</kw>
+<kw name="All users must have a name, username and email" library="ResourceAPI">
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${RESPONSE.json()["name"]}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.852" level="INFO">Length is 13</msg>
+<status status="PASS" starttime="20200127 00:08:15.851" endtime="20200127 00:08:15.852"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${RESPONSE.json()["username"]}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.853" level="INFO">Length is 4</msg>
+<status status="PASS" starttime="20200127 00:08:15.852" endtime="20200127 00:08:15.853"></status>
+</kw>
+<kw name="Should Not Be Empty" library="BuiltIn">
+<doc>Verifies that the given item is not empty.</doc>
+<arguments>
+<arg>${RESPONSE.json()["email"]}</arg>
+</arguments>
+<msg timestamp="20200127 00:08:15.854" level="INFO">Length is 17</msg>
+<status status="PASS" starttime="20200127 00:08:15.853" endtime="20200127 00:08:15.855"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:15.849" endtime="20200127 00:08:15.855"></status>
+</kw>
+<status status="PASS" starttime="20200127 00:08:15.788" endtime="20200127 00:08:15.855" critical="yes"></status>
 </test>
-<status status="PASS" starttime="20200126 23:43:24.778" endtime="20200126 23:43:25.312"></status>
+<status status="PASS" starttime="20200127 00:08:14.881" endtime="20200127 00:08:15.857"></status>
 </suite>
 <statistics>
 <total>

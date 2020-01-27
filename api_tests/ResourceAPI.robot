@@ -2,9 +2,12 @@
 Library       RequestsLibrary
 Library       Collections
 
-
 *** Variable ***
 ${URL_API}         https://jsonplaceholder.typicode.com
+&{USER_1}           id=1
+...                 name=Leanne Graham
+...                 username=Bret
+...                 email=Sincere@april.biz
 
 
 *** Keywords ***
@@ -34,4 +37,13 @@ Request user "${ID_USER}"
     log             ${RESPONSE.text}
     Set Test Variable       ${RESPONSE}
 
-    
+Validate user information
+    Dictionary Should Contain Item      ${RESPONSE.json()}      id          ${USER_1.id}
+    Dictionary Should Contain Item      ${RESPONSE.json()}      name        ${USER_1.name}
+    Dictionary Should Contain Item      ${RESPONSE.json()}      username    ${USER_1.username}
+    Dictionary Should Contain Item      ${RESPONSE.json()}      email       ${USER_1.email}
+
+All users must have a name, username and email
+    Should Not Be Empty         ${RESPONSE.json()["name"]}
+    Should Not Be Empty         ${RESPONSE.json()["username"]}
+    Should Not Be Empty         ${RESPONSE.json()["email"]}
