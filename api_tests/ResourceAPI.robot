@@ -47,3 +47,7 @@ All users must have a name, username and email
     Should Not Be Empty         ${RESPONSE.json()["name"]}
     Should Not Be Empty         ${RESPONSE.json()["username"]}
     Should Not Be Empty         ${RESPONSE.json()["email"]}
+    
+
+Company name length "${NAME_LENGHT}"
+    Length Should Be        ${RESPONSE.json()["name"]}      ${NAME_LENGHT}           
