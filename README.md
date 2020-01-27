@@ -1,4 +1,4 @@
-## ui_tests
+### ui_tests
 Automated testing to verify this page http://automationpractice.com/index.php using the Ruby language with the frameworks cucumber, capybara and selenium-webdriver.
 
 <ul>
@@ -9,7 +9,8 @@ Automated testing to verify this page http://automationpractice.com/index.php us
 <li> The project generates automatically an HTML report  with screenshots.</li>
 </ul>
 
-## soapUI_tests
+### soapUI_tests
 API tests using soapUI and Groovy language to verify the host https://jsonplaceholder.typicode.com/
 
-
+### api_tests
+API tests using Robot Framework
