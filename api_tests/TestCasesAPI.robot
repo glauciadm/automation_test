@@ -14,5 +14,10 @@ Request an user
     Validate user information
     All users must have a name, username and email
 
-Company name should be <=50 characters 
-    Company name length "<=50"
+Create a new post (POST)
+    Create a new post
+    Validate status code - POST     201 
+
+Create a post with empty title
+    Post with empty title
+    Validate status code - Empty title        400

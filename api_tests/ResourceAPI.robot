@@ -48,6 +48,26 @@ All users must have a name, username and email
     Should Not Be Empty         ${RESPONSE.json()["username"]}
     Should Not Be Empty         ${RESPONSE.json()["email"]}
     
+Create a new post
+    ${HEADERS}      Create Dictionary       content-type=application/json
+    ${RESPONSE}     Post Request     jsonplaceholder         /posts 
+    ...                              data={"userId": 1,"id": 1,"title": "sunt aut facere r","body": "quia et"}                    
+    ...                              headers=${HEADERS} 
+    log         ${RESPONSE.text}
+    Set Test Variable       ${RESPONSE}
 
-Company name length "${NAME_LENGHT}"
-    Length Should Be        ${RESPONSE.json()["name"]}      ${NAME_LENGHT}           
+Validate status code - POST
+    [Arguments]         ${CORRECT_STATUSCODE}
+    Should Be Equal As Strings      ${RESPONSE.status_code}      ${CORRECT_STATUSCODE}
+
+Post with empty title
+    ${HEADERS}      Create Dictionary       content-type=application/json
+    ${RESPONSE}     Post Request     jsonplaceholder         /posts 
+    ...                              data={"userId": 1,"id": 1,"title": ,"body": "quia et"}                    
+    ...                              headers=${HEADERS} 
+    log         ${RESPONSE.text}
+    Set Test Variable       ${RESPONSE}
+
+Validate status code - Empty title
+    [Arguments]         ${CORRECT_STATUSCODE}
+    Should Be Equal As Strings      ${RESPONSE.status_code}      ${CORRECT_STATUSCODE}
