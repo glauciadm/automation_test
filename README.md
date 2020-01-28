@@ -10,7 +10,7 @@ Automated testing to verify this page http://automationpractice.com/index.php us
 </ul>
 
 ### soapUI_tests
-API tests using soapUI and Groovy language to verify the host https://jsonplaceholder.typicode.com/
+API tests using soapUI to verify the host https://jsonplaceholder.typicode.com/
 
 ### api_tests
-API tests using Robot Framework
+API tests using Robot Framework to verify the host https://jsonplaceholder.typicode.com/
